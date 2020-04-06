@@ -22,11 +22,11 @@ myCenter = myObject.location
 # Iterate through all the object's vertices, and scale based on their distance from center.
 for myVert in myObject.data.vertices:
     if measure(myVert, myCenter) > myRadius:
-        myVert.co.x = myVert.co.x * scaleAmount
-        myVert.co.y = myVert.co.y * scaleAmount
-        myVert.co.z = myVert.co.z * scaleAmount
+        myVert.co.x *= scaleAmount
+        myVert.co.y *= scaleAmount
+        myVert.co.z *= scaleAmount
     elif measure(myVert, myCenter) < myRadius:
-        myVert.co.x = myVert.co.x / scaleAmount
-        myVert.co.y = myVert.co.y / scaleAmount
-        myVert.co.z = myVert.co.z / scaleAmount
+        myVert.co.x /= scaleAmount
+        myVert.co.y /= scaleAmount
+        myVert.co.z /= scaleAmount
     else: nothing
